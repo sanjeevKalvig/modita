@@ -2643,8 +2643,17 @@ form textarea:required:valid {
     max-width: 760px;
   }
 }
+@media only screen and (min-width: 1500px) {
+  .headline{
+    top: 20rem;
+  }
+}
 
 @media only screen and (min-width: 1600px) {
+  .headline{
+    top: 20rem;
+  }
+
   .headline__title {
     max-width: 900px;
   }
