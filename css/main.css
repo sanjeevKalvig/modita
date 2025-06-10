@@ -3427,6 +3427,13 @@ form textarea:required:valid {
 
 
 }
+@media only screen and (min-width: 1600px) {
+  .avatar__container {
+    max-height: 700px;
+  }
+
+
+}
 
 .avatar__block {
   position: relative;
