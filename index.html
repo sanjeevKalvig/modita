@@ -33,6 +33,15 @@
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <!-- Custom Browser Color End -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+  </script>
+  <script type="text/javascript">
+    (function () {
+      emailjs.init({
+        publicKey: "WED2xy-TB38WmycyU",
+      });
+    })();
+  </script>
 </head>
 
 <body>
@@ -90,14 +99,14 @@
 
     <!-- Header Controls Start -->
     <div class="header__controls d-flex justify-content-end">
-  <button id="color-switcher" class="color-switcher header__switcher btn" type="button" role="switch"
-    aria-label="light/dark mode" aria-checked="true"></button>
-  <a id="notify-trigger" class="header__trigger btn"
-    href="https://mail.google.com/mail/?view=cm&fs=1&to=moditavrana@gmail.com&su=Message%20from%20your%20site">
-    <span class="trigger__caption">Let's Talk</span>
-    <i class="ph-bold ph-chat-dots"></i>
-  </a>
-</div>
+      <button id="color-switcher" class="color-switcher header__switcher btn" type="button" role="switch"
+        aria-label="light/dark mode" aria-checked="true"></button>
+      <a id="notify-trigger" class="header__trigger btn"
+        href="https://mail.google.com/mail/?view=cm&fs=1&to=moditavrana@gmail.com&su=Message%20from%20your%20site">
+        <span class="trigger__caption">Let's Talk</span>
+        <i class="ph-bold ph-chat-dots"></i>
+      </a>
+    </div>
     <!-- Header Controls End -->
 
   </header>
@@ -189,14 +198,16 @@
             </svg>
             <span>Let's meet!</span>
           </p>
-          <h1 class="headline__title animate-headline">I'm Modita Rana<br>Software Engineer and Cloud expert.</h1>
-          <div class="headline__btnholder d-flex flex-column flex-sm-row">
+          <h1 class="headline__title  animate-headline">I'm Modita Rana Software Engineer, Cloud Observability
+            Developer.</h1>
+          <div class="headline__btnholder  d-flex flex-column flex-sm-row">
             <a class="btn mobile-vertical btn-default btn-hover btn-hover-accent-mobile animate-headline"
               href="#portfolio">
               <span class="btn-caption">My Works</span>
               <i class="ph-bold ph-squares-four"></i>
             </a>
-            <a class="btn mobile-vertical btn-default btn-hover btn-hover-outline-mobile animate-headline" href="#0">
+            <a class="btn mobile-vertical btn-default btn-hover btn-hover-outline-mobile animate-headline"
+              href="/ModitaRana.pdf">
               <span class="btn-caption">Download CV</span>
               <i class="ph-bold ph-download-simple"></i>
             </a>
@@ -281,9 +292,9 @@
               <!-- Works Gallery Single Item Start -->
               <figure class="col-12 col-md-6 gallery__item grid-item animate-card-2" itemprop="associatedMedia"
                 itemscope itemtype="http://schema.org/ImageObject">
-                <a href="img/Project//project2.jpeg" data-image="img/Project//project2.jpeg" class="gallery__link"
+                <a href="img/Project/project2.jpeg" data-image="img/Project//project2.jpeg" class="gallery__link"
                   itemprop="contentUrl" data-size="1400x1400">
-                  <img src="img/Project//project2.jpeg" class="gallery__image" itemprop="thumbnail"
+                  <img src="img/Project/project2.jpeg" class="gallery__image" itemprop="thumbnail"
                     alt="Image description">
                 </a>
                 <figcaption class="gallery__descr" itemprop="caption description">
@@ -363,7 +374,8 @@
                 <p class="about-descr__text animate-in-up">
                   I am passionate backend software engineer with 3 years of industry experience in building and
                   maintaining scalable
-                  and reliable systems.My experties lies in Java,data structures,OOP,databases,Api's,cloud technologies
+                  and reliable systems.My experties lies in Java,data structures, OOP , databases , Api's , cloud
+                  technologies
                   and solving complex problem
 
                 </p>
@@ -374,7 +386,7 @@
                   needs.
                 </p>
                 <div class="btn-group about-descr__btnholder animate-in-up">
-                  <a class="btn mobile-vertical btn-default btn-hover btn-hover-accent" href="#0">
+                  <a class="btn mobile-vertical btn-default btn-hover btn-hover-accent" href="/ModitaRana.pdf">
                     <span class="btn-caption">Download CV</span>
                     <i class="ph-bold ph-download-simple"></i>
                   </a>
@@ -849,18 +861,18 @@
           <div class="form-container">
 
             <!-- Reply Messages Start -->
-            <div class="form__reply centered text-center">
-              <i class="ph-bold ph-smiley reply__icon"></i>
-              <p class="reply__title">Done!</p>
-              <span class="reply__text">Thanks for your message. I'll get back as soon as possible.</span>
+
+            <div id="popup-message" class="popup-message" style="display: none;">
+                <p id="popup-text"></p>
             </div>
+
             <!-- Reply Messages End -->
 
             <!-- Contact Form Start -->
             <form class="form contact-form" id="contact-form">
               <!-- Hidden Required Fields -->
               <input type="hidden" name="project_name" value="Starter Template">
-              <input type="hidden" name="admin_email" value="support@mixdesign.dev">
+              <input type="hidden" name="admin_email" value="sk3616593@gmail.com">
               <input type="hidden" name="form_subject" value="Contact Form Message">
               <!-- END Hidden Required Fields-->
               <div class="container-fluid p-0">
