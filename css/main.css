@@ -2578,6 +2578,7 @@ form textarea:required:valid {
   position: relative;
   height: auto;
   padding: 6rem 0;
+  z-index: 10;
 }
 
 @media only screen and (min-width: 768px) {

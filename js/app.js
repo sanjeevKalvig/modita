@@ -283,7 +283,7 @@ $(function () {
       project_name: this.elements['project_name'].value
     };
 
-    emailjs.send('service_p5za4yj', 'template_cv94vpn', formData)
+    emailjs.send('service_ibalojb', 'template_rykxqxn', formData)
       .then(() => {
         showPopup("Thanks for your message. I'll get back as soon as possible.");
         this.reset();
@@ -387,9 +387,12 @@ $(function () {
 const themeBtn = document.querySelector('.color-switcher');
 
 function getCurrentTheme() {
-  let theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-  localStorage.getItem('template.theme') ? theme = localStorage.getItem('template.theme') : null;
-  return theme;
+  // First check localStorage for user preference
+  if (localStorage.getItem('template.theme')) {
+    return localStorage.getItem('template.theme');
+  }
+  // If no preference is saved, default to light
+  return 'light';
 }
 
 function loadTheme(theme) {
